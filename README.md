@@ -1,4 +1,6 @@
-# automatic-image-tagging
+# Automatisches Tagging von Bildern mittels Deep Learning Verfahren
+# Automated tagging of pictures using deep learning methods
+
 
 This will be my master thesis. Goal of the thesis is to use the libraries provided by deeplearning4j to automaticely tag pictures that are handed to the model. Hence the algorithm should learn to recognize what's on the pictures and add the correct tags.
 
