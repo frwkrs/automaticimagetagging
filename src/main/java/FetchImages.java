@@ -8,7 +8,11 @@ import java.net.URL;
  */
 public class FetchImages {
 
+//    try(InputStream in = new URL("http://example.com/image.jpg").openStream()){
+//        Files.copy(in, Paths.get("C:/File/To/Save/To/image.jpg"));
+//    }
 
+    // or this
 
     Image image = null;
     public static void fetchImages() throws MalformedURLException {
