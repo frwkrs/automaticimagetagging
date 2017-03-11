@@ -6,5 +6,10 @@ This will be my master thesis. Goal of the thesis is to use the libraries provid
 
 # Dataset
 
-The Training Dataset consists of different Images. They all have a disctinct number of tags (like a picture that has a lake, a house and a mountain on it will be tagged with "lake, house, mountain"). 
+The Training Dataset consists of different Images. They all have a disctinct number of tags (like a picture that has a lake, a house and a mountain on it will be tagged with "lake, house, mountain"). The Dataset has a total of 3235 datarows (You can find it here: https://www.crowdflower.com/data-for-everyone/)
+
+
+
+
+
 
