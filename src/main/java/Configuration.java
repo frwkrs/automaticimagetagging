@@ -10,21 +10,21 @@ public class Configuration {
     // size of the images
     // they are going to be transformed to that size
     // also size of the matrix
-    public static final int height =1024;
-    public static final int width =768;
+    protected static final int height =1024;
+    protected static final int width =768;
     // channels = red green blue
-    public static final int channels = 3;
+    protected static final int channels = 3;
     // seed for repeatable tests
-    public static final int rngseed = 123;
-    public static final int batchSize = 1;
+    protected static final int rngseed = 123;
+    protected static final int batchSize = 1;
     // number of possible labers
-    public static final int outputNum = 2;
+    protected static final int outputNum = 2;
 
-    public static final int numEpochs = 15;
+    protected static final int numEpochs = 15;
 
-    public static final double learningRate = 0.006;
-    public static final int iterations = 1;
-    public static final double momentum = 0.9;
+    protected static final double learningRate = 0.006;
+    protected static final int iterations = 1;
+    protected static final double momentum = 0.9;
 
 
 //    public static Configuration getConfiguration() {
