@@ -4,9 +4,6 @@ import org.datavec.api.split.FileSplit;
 import org.datavec.api.split.InputSplit;
 import org.datavec.image.loader.BaseImageLoader;
 import org.datavec.image.recordreader.ImageRecordReader;
-import org.datavec.image.transform.ImageTransform;
-import org.datavec.image.transform.MultiImageTransform;
-import org.datavec.image.transform.ShowImageTransform;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
@@ -30,11 +27,12 @@ public class ImagePipeline {
 
     public static final Random randNumGen = new Random(seed);
 
-    protected static int height = 50;
-    protected static int width = 50;
+    protected static int height = 2807;
+    protected static int width = 4210;
+    // red green blue
     protected static int channels = 3;
     protected static int numExamples = 80;
-    protected static int outputNum = 4;
+    protected static int outputNum = 2;
 
     public static void main(String[] args) throws Exception {
 
@@ -51,7 +49,7 @@ public class ImagePipeline {
         //And these label/class directories live together in the parent directory
         //
         //
-        File parentDir = new File(System.getProperty("user.dir"), "/Users/Volker/automaticimagetagging/src/main/resources");
+        File parentDir = new File(System.getProperty("user.dir"), "src/main/resources");
         //Files in directories under the parent dir that have "allowed extensions" plit needs a random number generator for reproducibility when splitting the files into train and test
         FileSplit filesInDir = new FileSplit(parentDir, allowedExtensions, randNumGen);
 
@@ -82,10 +80,10 @@ public class ImagePipeline {
 
         //You can use the ShowImageTransform to view your images
         //Code below gives you a look before and after, for a side by side comparison
-        ImageTransform transform = new MultiImageTransform(randNumGen,new ShowImageTransform("Display - before "));
+//        ImageTransform transform = new MultiImageTransform(randNumGen,new ShowImageTransform("Display - before "));
 
         //Initialize the record reader with the train data and the transform chain
-        recordReader.initialize(trainData,transform);
+        recordReader.initialize(trainData);
         //convert the record reader to an iterator for training - Refer to other examples for how to use an iterator
         DataSetIterator dataIter = new RecordReaderDataSetIterator(recordReader, 10, 1, outputNum);
         while (dataIter.hasNext()) {
